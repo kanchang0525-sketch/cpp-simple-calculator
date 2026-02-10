@@ -1,35 +1,14 @@
-#include <iostream>
-using namespace std;
+# C++ Simple Console Calculator
 
-int main() {
-    char op;
-    float num1, num2;
+Basic arithmetic calculator (+, -, *, /) using switch-case with division-by-zero handling.
 
-    cout << "Enter operator: +, -, *, /: ";
-    cin >> op;
+## Features
+- Supports float numbers
+- Error handling for invalid operators and division by zero
+- Console-based, beginner-friendly
 
-    cout << "Enter two numbers: ";
-    cin >> num1 >> num2;
-
-    switch(op) {
-        case '+':
-            cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
-            break;
-        case '-':
-            cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
-            break;
-        case '*':
-            cout << num1 << " * " << num2 << " = " << num1 * num2 << endl;
-            break;
-        case '/':
-            if (num2 != 0)
-                cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
-            else
-                cout << "Error: Division by zero!" << endl;
-            break;
-        default:
-            cout << "Invalid operator!" << endl;
-    }
-
-    return 0;
-}
+## Build & Run
+```bash
+g++ calculator.cpp -o calculator
+./calculator    # Linux/Mac
+calculator.exe  # Windows
